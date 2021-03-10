@@ -30,8 +30,6 @@ function addTask() {
 
   newElem.addEventListener('click', selectedClass);
   newElem.addEventListener('dblclick', completedClass);
-
-  console.log(newElem.innerHTML);
 }
 
 const addButton = document.getElementById('criar-tarefa');
@@ -49,10 +47,13 @@ clearButton.addEventListener('click', clearList);
 // BOTÃO PARA REMOVER AS TAREFAS FINALIZADAS
 function clearCompleted() {
   const completedList = document.getElementsByClassName('completed');
-  for (let index = 0; index <= completedList.length; index += 1) {
-    completedList[index].parentNode.removeChild(completedList[index]);
+  while (completedList.length > 0) {
+    completedList[0].parentNode.removeChild(completedList[0]);
   }
 }
 
 const completedButton = document.getElementById('remover-finalizados');
 completedButton.addEventListener('click', clearCompleted);
+
+// REFERÊNCIA: https://stackoverflow.com/questions/13555785/remove-all-child-from-node-with-the-same-class-pure-js
+// ACESSO EM 10/03/2021
