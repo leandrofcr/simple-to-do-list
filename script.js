@@ -1,32 +1,45 @@
+// ALTERA A CLASSE DO ELEMENTO PARA 'selected'.
+function selectedClass() {
+  const currentSelected = document.querySelector('.selected');
+  if (currentSelected !== null) {
+    currentSelected.classList.remove('selected')
+  }
+  this.classList.add('selected');
+}
+
+// ADICIONA A CLASSE 'completed' CASO NAO TENHA, OU REMOVE CASO TENHA.
+function completedClass() {
+  if (this.className.includes('completed')) {
+    this.classList.remove('completed');
+  } else {
+    this.classList.add('completed');
+  }
+}
+
 // ADICIONA O TEXTO DE INPUT NA LISTA DE TAREFAS.
 function addTask() {
 
-  let inputText = document.querySelector('#texto-tarefa');
-  let taskList = document.querySelector('#lista-tarefas');
+  const inputText = document.querySelector('#texto-tarefa');
+  const taskList = document.querySelector('#lista-tarefas');
 
 
-  let newElem = document.createElement('li');
+  const newElem = document.createElement('li');
   newElem.innerText = inputText.value;
   newElem.className = 'list-item';
   taskList.appendChild(newElem);
 
   inputText.value = '';
 
-  newElem.addEventListener('click', changeClass);
+  newElem.addEventListener('click', selectedClass);
+  newElem.addEventListener('dblclick', completedClass);
 
   console.log(newElem.innerHTML);
 
 }
 
-let button = document.getElementById('criar-tarefa');
+const button = document.getElementById('criar-tarefa');
 button.addEventListener('click', addTask);
 
 
 
-function changeClass() {
-  let currentSelected = document.querySelector('.selected');
-  if (currentSelected !== null) {
-    currentSelected.classList.remove('selected')
-  }
-  this.className = 'selected';
-}
+
