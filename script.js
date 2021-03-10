@@ -37,9 +37,16 @@ function addTask() {
 
 }
 
-const button = document.getElementById('criar-tarefa');
-button.addEventListener('click', addTask);
+const addButton = document.getElementById('criar-tarefa');
+addButton.addEventListener('click', addTask);
 
+// BOTÃO PARA LIMPAR TODA LISTA DE TAREFAS
+function clearList(){
+  const taskList = document.getElementById('lista-tarefas');
+  taskList.innerHTML='';
+}
 
+const clearButton= document.getElementById('apaga-tudo');
+clearButton.addEventListener('click', clearList)
 
 
