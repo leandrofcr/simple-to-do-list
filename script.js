@@ -2,7 +2,7 @@
 function selectedClass() {
   const currentSelected = document.querySelector('.selected');
   if (currentSelected !== null) {
-    currentSelected.classList.remove('selected')
+    currentSelected.classList.remove('selected');
   }
   this.classList.add('selected');
 }
@@ -18,10 +18,8 @@ function completedClass() {
 
 // ADICIONA O TEXTO DE INPUT NA LISTA DE TAREFAS.
 function addTask() {
-
   const inputText = document.querySelector('#texto-tarefa');
   const taskList = document.querySelector('#lista-tarefas');
-
 
   const newElem = document.createElement('li');
   newElem.innerText = inputText.value;
@@ -34,7 +32,6 @@ function addTask() {
   newElem.addEventListener('dblclick', completedClass);
 
   console.log(newElem.innerHTML);
-
 }
 
 const addButton = document.getElementById('criar-tarefa');
@@ -47,8 +44,7 @@ function clearList() {
 }
 
 const clearButton = document.getElementById('apaga-tudo');
-clearButton.addEventListener('click', clearList)
-
+clearButton.addEventListener('click', clearList);
 
 // BOTÃO PARA REMOVER AS TAREFAS FINALIZADAS
 function clearCompleted() {
@@ -58,6 +54,5 @@ function clearCompleted() {
   }
 }
 
-
 const completedButton = document.getElementById('remover-finalizados');
-completedButton.addEventListener('click', clearCompleted)
+completedButton.addEventListener('click', clearCompleted);
