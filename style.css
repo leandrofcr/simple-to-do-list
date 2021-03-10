@@ -20,6 +20,14 @@ button {
   padding: 3px 15px;
 }
 
+button:hover {
+  background-color: rgb(80 , 170 , 230);
+}
+
+button:active {
+  color: black;
+}
+
 main {
   background-color: whitesmoke;
   padding: 20px;
@@ -36,7 +44,6 @@ li {
   margin-right: auto;
 }
 
-
 .selected {
   background-color: grey;
 
@@ -48,4 +55,24 @@ li {
 
 p {
   color: grey;
+}
+
+.arrow {
+  background-color: rgb(230 , 165 , 44);
+}
+
+.arrow:hover {
+  background-color: rgb(247 , 194 , 95);
+}
+
+#remover-selecionado {
+  background-color: rgb(197 , 53 , 53);
+}
+
+#remover-selecionado:hover {
+  background-color: rgb(231 , 91 , 91);
+}
+
+li:hover {
+  background-color: lightgray;
 }
