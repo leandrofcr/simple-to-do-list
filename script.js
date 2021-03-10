@@ -78,3 +78,25 @@ deleteSelectedButton.addEventListener('click', () => {
   const selectedItem = document.querySelector('.selected');
   selectedItem.remove();
 });
+
+// MOVE O ITEM SELECIONADO PARA CIMA
+function moveUp() {
+  const selectedItem = document.querySelector('.selected');
+  if (selectedItem !== taskList.firstChild) {
+    taskList.insertBefore(selectedItem, selectedItem.previousSibling);
+  }
+}
+
+const moveUpButton = document.getElementById('mover-cima');
+moveUpButton.addEventListener('click', moveUp);
+
+// MOVE O ITEM SELECIONADO PARA BAIXO
+function moveDown() {
+  const selectedItem = document.querySelector('.selected');
+  if (selectedItem !== taskList.lastChild) {
+    taskList.insertBefore(selectedItem, selectedItem.nextSibling.nextSibling);
+  }
+}
+
+const moveDownButton = document.getElementById('mover-baixo');
+moveDownButton.addEventListener('click', moveDown);
