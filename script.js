@@ -1,9 +1,9 @@
-//CARREGA A LISTA SALVA EM localStorage
-window.onload = (function () {
-  const taskItens = document.getElementById('lista-tarefas');
+const taskList = document.getElementById('lista-tarefas');
+// CARREGA A LISTA SALVA EM localStorage
+window.onload = (function loadList() {
   const savedItens = localStorage.getItem('listItens');
-  taskItens.innerHTML = savedItens;
-})
+  taskList.innerHTML = savedItens;
+});
 
 // ALTERA A CLASSE DO ELEMENTO PARA 'selected'.
 function selectedClass() {
@@ -26,7 +26,6 @@ function completedClass() {
 // ADICIONA O TEXTO DE INPUT NA LISTA DE TAREFAS.
 function addTask() {
   const inputText = document.querySelector('#texto-tarefa');
-  const taskList = document.querySelector('#lista-tarefas');
 
   const newElem = document.createElement('li');
   newElem.innerText = inputText.value;
@@ -44,7 +43,6 @@ addButton.addEventListener('click', addTask);
 
 // BOTÃO PARA LIMPAR TODA LISTA DE TAREFAS
 function clearList() {
-  const taskList = document.getElementById('lista-tarefas');
   taskList.innerHTML = '';
 }
 
@@ -65,11 +63,18 @@ completedButton.addEventListener('click', clearCompleted);
 // REFERÊNCIA: https://stackoverflow.com/questions/13555785/remove-all-child-from-node-with-the-same-class-pure-js
 // ACESSO EM 10/03/2021
 
-// SALVA A LISTA DE TAREFAS EM localStorage 
+// SALVA A LISTA DE TAREFAS EM localStorage
 function saveList() {
   const taskItens = document.getElementById('lista-tarefas').innerHTML;
   localStorage.setItem('listItens', taskItens);
 }
+
 const saveButton = document.getElementById('salvar-tarefas');
 saveButton.addEventListener('click', saveList);
 
+// CRIA BOTAO DE REMOVER TAREFA SELECIONADA
+const deleteSelectedButton = document.getElementById('remover-selecionado');
+deleteSelectedButton.addEventListener('click', () => {
+  const selectedItem = document.querySelector('.selected');
+  selectedItem.remove();
+});
