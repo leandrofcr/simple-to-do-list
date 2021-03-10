@@ -41,12 +41,23 @@ const addButton = document.getElementById('criar-tarefa');
 addButton.addEventListener('click', addTask);
 
 // BOTÃO PARA LIMPAR TODA LISTA DE TAREFAS
-function clearList(){
+function clearList() {
   const taskList = document.getElementById('lista-tarefas');
-  taskList.innerHTML='';
+  taskList.innerHTML = '';
 }
 
-const clearButton= document.getElementById('apaga-tudo');
+const clearButton = document.getElementById('apaga-tudo');
 clearButton.addEventListener('click', clearList)
 
 
+// BOTÃO PARA REMOVER AS TAREFAS FINALIZADAS
+function clearCompleted() {
+  const completedList = document.getElementsByClassName('completed');
+  for (let index = 0; index <= completedList.length; index += 1) {
+    completedList[index].parentNode.removeChild(completedList[index]);
+  }
+}
+
+
+const completedButton = document.getElementById('remover-finalizados');
+completedButton.addEventListener('click', clearCompleted)
