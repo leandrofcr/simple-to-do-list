@@ -82,7 +82,7 @@ deleteSelectedButton.addEventListener('click', () => {
 // MOVE O ITEM SELECIONADO PARA CIMA
 function moveUp() {
   const selectedItem = document.querySelector('.selected');
-  if (selectedItem !== taskList.firstChild) {
+  if (selectedItem !== taskList.firstChild && selectedItem !== null) {
     taskList.insertBefore(selectedItem, selectedItem.previousSibling);
   }
 }
@@ -93,7 +93,7 @@ moveUpButton.addEventListener('click', moveUp);
 // MOVE O ITEM SELECIONADO PARA BAIXO
 function moveDown() {
   const selectedItem = document.querySelector('.selected');
-  if (selectedItem !== taskList.lastChild) {
+  if (selectedItem !== taskList.lastChild && selectedItem !== null) {
     taskList.insertBefore(selectedItem, selectedItem.nextSibling.nextSibling);
   }
 }
