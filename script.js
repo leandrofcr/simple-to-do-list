@@ -107,3 +107,17 @@ function moveDown() {
 
 const moveDownButton = document.getElementById('mover-baixo');
 moveDownButton.addEventListener('click', moveDown);
+
+// CRIA CHECKBOX PARA ALTERAR O TEMA PARA DARK MODE
+const checkBox = document.getElementById('checkbox');
+
+function darkMode() {
+  const currentStyle = document.getElementById('page-style');
+  if (checkBox.checked === true) {
+    currentStyle.href = 'style-dark-mode.css';
+  } else {
+    currentStyle.href = 'style.css';
+  }
+}
+
+checkBox.addEventListener('click', darkMode);
