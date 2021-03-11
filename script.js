@@ -1,9 +1,4 @@
 const taskList = document.getElementById('lista-tarefas');
-// CARREGA A LISTA SALVA EM localStorage
-window.onload = (function loadList() {
-  const savedItens = localStorage.getItem('listItens');
-  taskList.innerHTML = savedItens;
-});
 
 // ALTERA A CLASSE DO ELEMENTO PARA 'selected'.
 function selectedClass() {
@@ -22,6 +17,18 @@ function completedClass() {
     this.classList.add('completed');
   }
 }
+
+// CARREGA A LISTA SALVA EM localStorage E ADD EVENTOS AOS ITENS
+window.onload = (function loadList() {
+  const savedItens = localStorage.getItem('listItens');
+  taskList.innerHTML = savedItens;
+
+  const listItens = document.querySelectorAll('.list-item');
+  for (let index = 0; index < listItens.length; index += 1) {
+    listItens[index].addEventListener('click', selectedClass);
+    listItens[index].addEventListener('dblclick', completedClass);
+  }
+});
 
 // ADICIONA O TEXTO DE INPUT NA LISTA DE TAREFAS.
 function addTask() {

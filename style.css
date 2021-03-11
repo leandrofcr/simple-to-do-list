@@ -76,3 +76,7 @@ p {
 li:hover {
   background-color: lightgray;
 }
+
+input:focus {
+  background-color: rgb(220 , 236 , 247);
+}
