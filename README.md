@@ -1,5 +1,5 @@
 
-# Boas vindas ao repositório do projeto Lista de Tarefas!
+# Boas vindas ao repositório do projeto [Lista de Tarefas](https://leandrofcr.github.io/simple-to-do-list/)!
 
 Este foi um dos primeiros projetos que pude aplicar em HTML, CSS e JavaScript juntos! Seja muito bem-vindo(a)!
 
