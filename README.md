@@ -7,7 +7,7 @@ Este foi um dos primeiros projetos que pude aplicar em HTML, CSS e JavaScript ju
 
 ## O que foi desenvolvido
 
-- Será desenvolvido uma lista de tarefas usando `HTML`, `CSS` e `JavaScript`.
+- Foi desenvolvido uma lista de tarefas usando `HTML`, `CSS` e `JavaScript`.
 
 ---
 
