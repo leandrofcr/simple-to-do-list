@@ -5,7 +5,7 @@ Este foi um dos primeiros projetos que pude aplicar em HTML, CSS e JavaScript ju
 
 ---
 
-## O que deverá ser desenvolvido
+## O que foi desenvolvido
 
 - Será desenvolvido uma lista de tarefas usando `HTML`, `CSS` e `JavaScript`.
 
@@ -24,7 +24,7 @@ Este foi um dos primeiros projetos que pude aplicar em HTML, CSS e JavaScript ju
 
 ## Linter
 
-Para garantir a qualidade do código, vamos utilizar neste projeto os linters `ESLint` e `StyleLint`.
+Para garantir a qualidade do código, foi utilizado neste projeto os linters `ESLint` e `StyleLint`.
 Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível
 e de fácil manutenção! Para rodá-los localmente no projeto, execute os comandos abaixo:
 
